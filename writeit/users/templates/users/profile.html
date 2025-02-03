@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ user.username }}{% endblock %} 
+
+{% block content %}
+                <div class="profile">
+                        {% if user.photo %}
+                        <br><img src="{{ user.photo.url }}" width="150px" height="auto" class="pfp">
+                        {% else %}
+                        <br><img src="{{ default_image }}" width="150px" height="auto" class="pfp">
+                        {% endif %}
+                    <br>Имя профиля: {{ user.username }}
+                    <br>Email: {{ user.email }}
+                    <br>Дата регистрации: {{ user.date_joined }}
+                </div>
+                {% if user == request.user %}
+                    <a href="{% url 'users:edit' %}" class="edit-button">Редактировать профиль</a>
+                {% endif %}
+{% endblock %}

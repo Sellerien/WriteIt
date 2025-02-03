@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+<div class="article-panel">
+    <p class="last">
+        
+        Дата: {{ post.time_update|date:"d-m-Y H:i:s" }} | Категория: {{ post.cat }} | Автор: {{ post.author.username|default:"Неизвестен" }}
+        {% if post.author == request.user or user.is_staff or is_moderator %}
+        | <a href="{% url 'edit_post' post.id %}">Редактировать</a> | <a href="{% url 'delete_post' post.id %}">Удалить</a>
+        {% endif %}
+        
+    </p>
+</div>
+<h1 style="text-align: center;">{{post.title}}</h1>
+
+{% if post.photo %}
+<p><img class="img-post" src="{{post.photo.url}}"></p>
+{% endif %}
+
+{{post.content|linebreaks}}
+
+
+{% endblock %}
+
+{% block comment %}
+
+<h2>Комментарии</h2>
+{% if user.is_authenticated %}
+            <h3>Оставьте комментарий.</h3>
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Готово</button>
+            </form>
+        {% else %}
+            <p>Вам нужно авторизоваться, чтобы оставить комментарий.</p>
+        {% endif %}        
+<ul>
+            {% for comment in comments %}
+                <li>
+                    <strong>{% if comment.author.photo %}<img src="{{ comment.author.photo.url }}" width="50px", height="50px">
+                        {% else %}<img src="{{ default_image }}" width="50px", height="50px">{% endif %}
+                    <br>{{ comment.author.username }}</strong> ({{ comment.time_create }})<br>
+                    {{ comment.text }}
+                    {% if comment.author == request.user or user.is_staff or is_moderator %}
+                    <br><a href="{% url 'delete_comment' comment.id %}">Удалить</a>
+                    {% endif %}
+                </li>
+            {% empty %}
+                <p>Пусто.</p>
+            {% endfor %}
+        </ul>
+    
+{% endblock %}

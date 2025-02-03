@@ -1,0 +1,9 @@
+{% for cat in cats %}
+{% if cat.id == cat_selected %}
+<li class="selected">{{cat.name}}</li>
+{% else %}
+<li class="li-categories"><a href="{{ cat.get_absolute_url }}" class="link-categories">{{cat.name}}</a></li>
+{% endif %}
+{% endfor %}
+<p><a href="{% url 'home' %}" class="all-categories">Все категории</a>
+</p><a href="{% url 'my_posts'%}" class="my-posts">Мои статьи</a>

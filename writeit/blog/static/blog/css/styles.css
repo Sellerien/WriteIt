@@ -1,0 +1,361 @@
+/* blog/css/styles.css */
+
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 10px;
+    color: #444;
+}
+
+a {
+    text-decoration: none;
+    color: #007BFF;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Навигация */
+nav {
+    background-color: #333;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav .menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav .menu li {
+    margin: 0 10px;
+}
+
+nav .menu li a {
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav .menu li a:hover {
+    color: #ddd;
+}
+
+/* Контейнер */
+.container {
+    display: flex;
+    max-width: 1600px;
+    margin: 20px auto;
+    padding: 0 20px;
+    gap: 20px;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 150px;
+}
+
+.content {
+    flex: 3;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Статьи */
+.list-articles {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-articles li {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.list-articles li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.article-panel p {
+    margin: 0 0 10px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.img-article-left {
+    float: left;
+    margin-right: 15px;
+    border-radius: 5px;
+    max-width: 150px;
+    height: auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.link-read-post a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.link-read-post a:hover {
+    color: #0056b3;
+}
+
+/* Формы */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+input, textarea, select, button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #007BFF;
+}
+
+button{
+    background-color: #333;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover{
+    background-color: #0056b3;
+}
+
+/* Профиль */
+.profile {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.pfp {
+    border-radius: 50%;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Категории */
+.link-categories {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: #007bff; /* Синий цвет текста */
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent; /* Прозрачная нижняя граница */
+}
+
+.link-categories:hover {
+    color: #0056b3; /* Более тёмный оттенок синего при наведении */
+}
+
+.li-categories {
+    list-style: none;
+}
+
+.all-categories, .my-posts {
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+}
+
+.selected {
+    font-weight: bold; /* Жирный шрифт */
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Исправление для длинных слов */
+.content, .list-articles li, .profile, .form-container, .article-panel {
+    word-wrap: break-word; /* Для поддержки старых браузеров */
+    overflow-wrap: break-word; /* Современный стандарт */
+}
+
+.img-article-left {
+    max-width: 100px; /* Для предотвращения выхода изображений за пределы контейнера */
+    height: auto;
+}
+
+* {
+    word-break: break-word;
+}
+
+.img-post {
+    width: 300px; /* Устанавливаем ширину */
+    height: auto; /* Сохраняем пропорции */
+    float: left; /* Располагаем картинку слева */
+    margin: 0 15px 15px 0; 
+}
+
+/* Контейнер для навигации */
+.nav-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Стиль для блока пагинации */
+.list-pages {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    background-color: #f0f0f0;
+}
+
+/* Стиль для каждой страницы */
+.page-num {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 0.1px 0.1px;
+    background-color: #f0f0f0;
+    color: #333;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* При наведении на номера страниц */
+.page-num:hover {
+    background-color: #333;
+    color: white;
+}
+
+/* Стиль для выбранной страницы */
+.page-num-selected {
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+}
+
+/* Стиль для стрелок вперед и назад */
+.page-num a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 18px;
+}
+
+.page-num a:hover {
+    color: white;
+}
+
+/* Стиль для стрелок при их отсутствии */
+.page-num a:disabled {
+    color: #ccc;
+    pointer-events: none;
+}
+
+.comments {
+    margin-top: 20px; /* Отступ сверху, чтобы отделить от блока навигации */
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 500px;
+}
+
+.comments h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.comments ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.comments ul li {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.comments ul li:last-child {
+    border-bottom: none;
+}
+
+.comments form {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.comments form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: none;
+}
+
+.comments form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.comments form button:hover {
+    background-color: #005bb5;
+}

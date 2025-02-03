@@ -1,0 +1,52 @@
+{% load static %}
+{% load blogtags %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" href="{% static "blog/css/styles.css" %}" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+            <li><a href="{% url 'home' %}">Главная</a></li>
+            <li><a href="{% url 'add_post' %}">Написать статью</a></li>
+            {% if user.is_authenticated %}
+            <form id="logoutForm" method="post" action="{% url 'users:logout' %}">
+
+                {% csrf_token %}
+
+                <li class="last"><a href="{% url 'users:profile' %}">{{ user.username }}</a> | <a href="#" onclick="document.getElementById('logoutForm').submit(); return false;">Выйти</a></li>
+
+            </form>
+            {% else %}
+                <li class="last"><a href="{% url 'users:login' %}">Войти</a> | <a href="{% url 'users:register' %}">Регистрация</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+
+    
+    <div class="container">
+        <div class="sidebar">
+            <h2 class="categorymenu">Категории</h2>
+
+            {% show_categories cat_selected %}
+
+        </div>
+        <div class="content">
+            {% block content %}
+            {% endblock %}
+            <div nav-container>
+                {% block navigation %}
+                {% endblock %}
+        </div>
+        </div>
+        <div class="comments">
+            {% block comment %}
+            {% endblock %}
+        </div>
+</body>
+</html>
