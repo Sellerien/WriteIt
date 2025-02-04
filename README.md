@@ -15,7 +15,7 @@
 1. Клонируйте репозиторий:
   git clone https://github.com/Sellerien/WriteIt.git
 
-2. перейдите в директорию проекта: cd ~/blogproject/
+2. перейдите в директорию проекта: cd ~/writeit/
 
 3. Создайте и активируйте виртуальное окружение:
   python -m venv venv 
