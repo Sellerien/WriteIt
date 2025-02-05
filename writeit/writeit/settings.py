@@ -26,9 +26,9 @@ load_dotenv()
 SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", "default-secret-key")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'writeit.ua']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -81,17 +81,27 @@ WSGI_APPLICATION = 'writeit.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': "django.db.backends.postgresql",
-        'NAME': "writeit_db",
-        'USER': "writeit",
-        'PASSWORD': "123321i12I",
-        'HOST': 'writeit.ua',
-        'PORT': 5432,
-    }
-}
+DB_ENGINE = os.getenv("DB_ENGINE", "sqlite")  # По умолчанию SQLite
 
+if DB_ENGINE == "postgres":
+    DATABASES = {
+        'default': {
+            'ENGINE': "django.db.backends.postgresql",
+            'NAME': os.getenv("DB_NAME"),
+            'USER': os.getenv("DB_USER"),
+            'PASSWORD': os.getenv("DB_PASSWORD"),
+            'HOST': os.getenv("DB_HOST"),
+            'PORT': os.getenv("DB_PORT"),
+        }
+    }
+    
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / "db.sqlite3",
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
