@@ -87,7 +87,7 @@ DATABASES = {
         'NAME': "writeit_db",
         'USER': "writeit",
         'PASSWORD': "123321i12I",
-        'HOST': 'localhost',
+        'HOST': 'writeit.ua',
         'PORT': 5432,
     }
 }
