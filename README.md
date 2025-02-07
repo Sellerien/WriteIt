@@ -17,19 +17,19 @@
 
 2. перейдите в директорию проекта: cd ~/writeit/
 
-3. Создайте и активируйте виртуальное окружение:
-  python -m venv venv 
-  source venv/bin/activate  # для Linux/Mac
-  venv\Scripts\activate     # для Windows
+3. Создайте и активируйте виртуальное окружение:  
+  python -m venv venv   
+  source venv/bin/activate  # для Linux/Mac  
+  venv\Scripts\activate     # для Windows  
 
-4. Установите зависимости:
-  cd writeit/
-  pip install -r requirements.txt
+4. Установите зависимости:  
+  cd writeit/  
+  pip install -r requirements.txt  
 
-5. Выполните миграцию базы данных:
+5. Выполните миграцию базы данных:  
   python manage.py migrate
 
-6. Запустите сервер:
+6. Запустите сервер:  
   python manage.py runserver
 
 Откройте в браузере http://127.0.0.1:8000/, чтобы увидеть проект в действии.
