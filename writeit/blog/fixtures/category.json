@@ -1,0 +1,130 @@
+[
+{
+  "model": "blog.category",
+  "pk": 4,
+  "fields": {
+    "name": "Автомобили",
+    "slug": "avtomobily"
+  }
+},
+{
+  "model": "blog.category",
+  "pk": 5,
+  "fields": {
+    "name": "Велосипеды",
+    "slug": "velosipedy"
+  }
+},
+{
+  "model": "blog.category",
+  "pk": 6,
+  "fields": {
+    "name": "Бизнес",
+    "slug": "biznes"
+  }
+},
+{
+  "model": "blog.category",
+  "pk": 7,
+  "fields": {
+    "name": "Книги",
+    "slug": "knigi"
+  }
+},
+{
+  "model": "blog.category",
+  "pk": 8,
+  "fields": {
+    "name": "Комиксы",
+    "slug": "komiksy"
+  }
+},
+{
+  "model": "blog.category",
+  "pk": 9,
+  "fields": {
+    "name": "Криптовалюты",
+    "slug": "kriptovalyuty"
+  }
+},
+{
+  "model": "blog.category",
+  "pk": 10,
+  "fields": {
+    "name": "Другие страны",
+    "slug": "drugie-strany"
+  }
+},
+{
+  "model": "blog.category",
+  "pk": 11,
+  "fields": {
+    "name": "Мода и стиль",
+    "slug": "moda-i-stil"
+  }
+},
+{
+  "model": "blog.category",
+  "pk": 12,
+  "fields": {
+    "name": "Физкультура",
+    "slug": "fizkultura"
+  }
+},
+{
+  "model": "blog.category",
+  "pk": 13,
+  "fields": {
+    "name": "Ин. языки",
+    "slug": "in-yaziki"
+  }
+},
+{
+  "model": "blog.category",
+  "pk": 14,
+  "fields": {
+    "name": "Футбол",
+    "slug": "futbol"
+  }
+},
+{
+  "model": "blog.category",
+  "pk": 15,
+  "fields": {
+    "name": "История",
+    "slug": "istoriya"
+  }
+},
+{
+  "model": "blog.category",
+  "pk": 16,
+  "fields": {
+    "name": "Медицина",
+    "slug": "meditsyna"
+  }
+},
+{
+  "model": "blog.category",
+  "pk": 17,
+  "fields": {
+    "name": "Религия",
+    "slug": "religiya"
+  }
+},
+{
+  "model": "blog.category",
+  "pk": 18,
+  "fields": {
+    "name": "Наука",
+    "slug": "nauka"
+  }
+},
+{
+  "model": "blog.category",
+  "pk": 19,
+  "fields": {
+    "name": "Спорт",
+    "slug": "sport"
+  }
+}
+]
