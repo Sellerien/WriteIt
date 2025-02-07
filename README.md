@@ -12,15 +12,15 @@
 
 ## Установка:
 В терминале:
-1. Клонируйте репозиторий:
-  git clone https://github.com/Sellerien/WriteIt.git
-
-2. перейдите в директорию проекта: cd ~/writeit/
-
-3. Создайте и активируйте виртуальное окружение:  
+1. Создайте и активируйте виртуальное окружение:  
   python -m venv venv   
   source venv/bin/activate  # для Linux/Mac  
-  venv\Scripts\activate     # для Windows  
+  venv\Scripts\activate     # для Windows
+
+2. Клонируйте репозиторий:
+  git clone https://github.com/Sellerien/WriteIt.git
+
+3. перейдите в директорию проекта: cd ~/writeit/
 
 4. Установите зависимости:  
   cd writeit/  
@@ -33,4 +33,6 @@
   python manage.py runserver
 
 Откройте в браузере http://127.0.0.1:8000/, чтобы увидеть проект в действии.
+
+Создать супер-пользователя: python manage.py createsuperuser
 
