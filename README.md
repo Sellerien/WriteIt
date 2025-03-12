@@ -1,8 +1,8 @@
 ## WriteIt
 
-Этот проект представляет собой блог-платформу, на которой пользователи могут создавать посты, оставлять комментарии, а также фильтровать посты по категориям. Реализованы система поиска постов по ключевым словам, система регистрации и авторизации по логину или электронной почте, смена пароля, а также админ-панель для управления контентом.
+This project is a blog platform where users can create posts, leave comments, and filter posts by categories. It includes a search system for posts by keywords, a registration and authentication system via username or email, password reset functionality, and an admin panel for content management.
 
-## Технологии:
+## Technologies:
 - Python 3.13
 - Django 5.1
 - PostgreSQL
@@ -10,29 +10,29 @@
 - Unittest
 - Git (для контроля версий)
 
-## Установка:
-В терминале:
-1. Создайте и активируйте виртуальное окружение:  
+## Installation:
+In the terminal:
+1. Create and activate a virtual environment::  
   python -m venv venv   
   source venv/bin/activate  # для Linux/Mac  
   venv\Scripts\activate     # для Windows
 
-2. Клонируйте репозиторий:
+2. Clone the repository:
   git clone https://github.com/Sellerien/WriteIt.git
 
-3. перейдите в директорию проекта: cd ~/writeit/
+3. Navigate to the project directory: cd ~/writeit/
 
-4. Установите зависимости:  
+4. Install requirements: 
   cd writeit/  
-  pip install -r requirements.txt  
+  pip install -r requirements.txt
 
-5. Выполните миграцию базы данных:  
+6. Apply database migrations:
   python manage.py migrate
 
-6. Запустите сервер:  
+7. Run the server:  
   python manage.py runserver
 
-Откройте в браузере http://127.0.0.1:8000/, чтобы увидеть проект в действии.
+Open http://127.0.0.1:8000/ in your browser to see the project in action.
 
-Создать супер-пользователя: python manage.py createsuperuser
+To create super-user: python manage.py createsuperuser
 
