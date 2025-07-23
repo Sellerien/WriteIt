@@ -8,7 +8,7 @@ This project is a blog platform where users can create posts, leave comments, an
 - PostgreSQL
 - HTML/CSS
 - Unittest
-- Git (для контроля версий)
+- Git
 
 ## Installation:
 In the terminal:
